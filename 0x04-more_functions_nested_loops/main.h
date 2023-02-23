@@ -1,5 +1,12 @@
-#ifndef MAIN_H
-#define maiN_H
+#ifndef _MAIN_H_
+#define _MAIN_H_
+
+/*
+ * File: main.h
+ * Auth: Yohanes Senbeto
+ * Desc: Header file containing prototypes for all functions
+ *       used in the 0x04 -more_functions_nested_loops directory.
+ */
 
 int _putchar(char c);
 int _isupper(int c);
@@ -13,5 +20,5 @@ void print_diagonal(int n);
 void print_square(int size);
 void print_triangle(int size);
 void print_number(int n);
-void main(void)
-#endif /*main _H */
+
+#endif
