@@ -1,30 +1,20 @@
 #include "main.h"
-#include <stdio.h>
+#include <stddef.h>
 /**
- * _strchr - locates a character in a string .
- * @s: string to check
- * @c: character to found
- * UPDATE V1.0 : Features : Pointers implementation instead of Arrays .
- * Pointer/memory incrementation instead of i .
- * Return: pointer to s or null
+ * _strchr - This is my funcion
+ * @s: This my string of char
+ * @c: This is my character
+ * Return: This is my resulti
  */
-
 char *_strchr(char *s, char c)
 {
-
-	while (*s)
+	for (; ; s++)
 	{
-		s++;
-
-			if (*s == c)
-		{
+		if (*s == c)
 			return (s);
-		}
-
-
+		if (*s == 0)
+			return (NULL);
 	}
-
-		return (0);
-
-
+	return (NULL);
 }
+

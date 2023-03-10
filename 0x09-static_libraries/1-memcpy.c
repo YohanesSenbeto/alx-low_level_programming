@@ -1,20 +1,23 @@
 #include "main.h"
 
 /**
- * _memcpy - fnct to copy memory content source to a char destination .
- * @dest: memory allocation of the destination
- * @src: memory content to copy from the src
- * @n: content in byte to copy
+ * _memcpy - This is my funcion copy Src to dest
+ * @dest: This is my result
+ * @src: This is my string
+ * @n: This is n my number bytes to copy
  *
- * Return: pointer to dest
+ * Return: This my my string copy
  */
+
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int i;
+	unsigned int a;
+	char *pDst = dest;
+	char const *pSrc =  src;
 
-	for (i = 0; i < n; i++)
+	for (a = 0; a < n; a++)
 	{
-		*(dest + i) = *(src + i);
+		*pDst++ = *pSrc++;
 	}
 	return (dest);
 }

@@ -1,23 +1,23 @@
 #include "main.h"
 /**
- *_strcmp - function comparison of strings
- *@s1:  pointer
- *@s2:  pointer
- *Return: j-integer
+ * _strcmp - This is my function
+ * @s1: This is my entry
+ * @s2: This is my entry again
+ * Return: This is my result
  */
+
 int _strcmp(char *s1, char *s2)
 {
-	int i, j;
-
-	j = 0;
-
-	for (i = 0; s1[i] != '\0' && s2[i] != '\0'; i++)
+	for (; (*s1 != '\0' && *s2 != '\0') && *s1 == *s2; s1++, s2++)
 	{
-		if (s1[i] != s2[i])
+	}
+	if (*s1 == *s2)
 	{
-		j = s1[i] - s2[i];
-		break;
+		return (0);
 	}
+	else
+	{
+		return (*s1 - *s2);
 	}
-		return (j);
 }
+

@@ -1,33 +1,31 @@
 #include "main.h"
-
 /**
- * _strspn - Entry point
- * @s: input
- * @accept: input
- * Return: Always 0 (Success)
+ * _strspn - This is my function
+ * @s: This is the string literal
+ * @accept: This is the second string
+ *
+ * Return: This is the equal string to S
  */
+
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i, n, value, check;
+	unsigned int a, b, c;
 
-	value = 0;
-
-	for (i = 0; s[i] != '\0'; i++)
+	c = 0;
+	for (a = 0; s[a] != '\0'; a++)
 	{
-		check = 0;
-
-		for (n = 0; accept[n] != '\0'; n++)
+		for (b = 0; accept[b] != '\0'; b++)
 		{
-			if (accept[n] == s[i])
+			if (accept[b] == s[a])
 			{
-				value++;
-				check = 1;
+				c++;
+				break;
 			}
 		}
-
-		if (check == 0)
-			return (value);
+		if (accept[b] != s[a])
+		{
+		break;
+		}
 	}
-
-	return (value);
+	return (c);
 }
