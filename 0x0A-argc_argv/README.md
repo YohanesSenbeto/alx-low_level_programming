@@ -1,4 +1,7 @@
-0x0A. C - argc, argv
+**0x0A. C - argc, argv**
+![image](https://user-images.githubusercontent.com/121575345/224479107-f63c7880-2562-461c-aef5-24745e504605.png)
+![image](https://user-images.githubusercontent.com/121575345/224479131-2cacb7e0-0fd7-4f60-b2e5-b2dcef5fc51d.png)
+
 Resources
 [Arguments to main]
 (https://intranet.alxswe.com/rltoken/Jip_nI4tv2ybQZ-jV3fqJg)
