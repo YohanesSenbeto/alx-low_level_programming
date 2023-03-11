@@ -7,7 +7,7 @@ https://intranet.alxswe.com/rltoken/31aLwv8qsXuiUZrOk9Djqg
 What does argc and argv mean?
 https://intranet.alxswe.com/rltoken/A0pzqslB6Z3Y3OV3hJQ6Tw
 how to compile with unused variablesh
-ttps://intranet.alxswe.com/rltoken/MkOUE1ndq1UAx9Erk-AVbg
+https://intranet.alxswe.com/rltoken/MkOUE1ndq1UAx9Erk-AVbg
 GENERAL
 How to use arguments passed to your program
 What are two prototypes of main that you know of, and in which case do you use one or the other
