@@ -1,6 +1,9 @@
 **0x0A. C - argc, argv**
 ![image](https://user-images.githubusercontent.com/121575345/224479107-f63c7880-2562-461c-aef5-24745e504605.png)
 ![image](https://user-images.githubusercontent.com/121575345/224479131-2cacb7e0-0fd7-4f60-b2e5-b2dcef5fc51d.png)
+![image](https://user-images.githubusercontent.com/121575345/224479199-18e39c09-3eca-4868-b104-f26659af7968.png)
+![image](https://user-images.githubusercontent.com/121575345/224479215-321d3129-3855-45fe-980a-e329bb470f4f.png)
+
 
 Resources
 [Arguments to main]
