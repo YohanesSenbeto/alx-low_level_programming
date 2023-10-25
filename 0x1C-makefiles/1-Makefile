@@ -4,10 +4,10 @@
 CC = gcc
 
 # Source files
-SRC = main.c utils.c
+SRC = main.c school.c
 
 # Object files
-OBJS = $(SRC:.c=.o)
+OBJ = $(SRC:.c=.o)
 
 # Executable name
 EXEC = school
@@ -20,9 +20,9 @@ all: $(EXEC)
 	$(CC) -c $< -o $@
 
 # Link object files into the executable
-$(EXEC): $(OBJS)
+$(EXEC): $(OBJ)
 	$(CC) $^ -o $@
 
 # Clean rule to remove object files and the executable
 clean:
-	rm -f $(OBJS) $(EXEC)
+	rm -f $(OBJ) $(EXEC)
