@@ -1,47 +1,50 @@
-#include <stdio.h>
-#include <math.h>
+/*
+ * File: 105-jump_list.c
+ * Auth: Yohanes senbeto Kankure
+ */
+
 #include "search_algos.h"
 
 /**
-* jump_list - Searches for a value in a sorted linked list using Jump search
-* @list: A pointer to the head of the sorted linked list to search in
-* @size: The number of nodes in the list
-* @value: The value to search for
-*
-* Return: A pointer to the first node where value is located,
-*         or NULL if the value is not present or the list is empty
-*/
+ * jump_list - Searches for the algorithm in a sorted singly
+ *             linked list of the integers using jump search.
+ * @list: A pointer to the  head of the linked list to search.
+ * @size: The number of nodes in the list.
+ * @value: The value to search for.
+ *
+ * Return: If the value is not present or the head of the list is NULL, NULL.
+ *         Otherwise, a pointer to the first node where the value is located.
+ *
+ * Description: Prints a value every time it is compared in the list.
+ *              Uses the square root of the list size as the jump steps.
+ */
 listint_t *jump_list(listint_t *list, size_t size, int value)
 {
-if (list == NULL || size == 0)
-{
-return (NULL);
-}
+    size_t steps, steps_size;
+    listint_t *node, *jump;
 
-size_t jump = sqrt(size);
-listint_t *current = list;
-listint_t *prev = NULL;
-int a, b;
+    if (list == NULL || size == 0)
+        return (NULL);
 
-while (current && current->n < value)
-{
-prev = current;
-for (size_t i = 0; i < jump && current->next != NULL; i++)
-{
-current = current->next;
-}
-printf("Value checked at index [%d] = [%d]\n", (int)current->n, current->n);
-}
+    steps = 0;
+    steps_size = sqrt(size);
+    for (node = jump = list; jump->index + 1 < size && jump->n < value;)
+    {
+        node = jump;
+        for (steps += steps_size; jump->index < steps; jump = jump->next)
+        {
+            if (jump->index + 1 == size)
+                break;
+        }
+        printf("Value checked at index [%ld] = [%d]\n", jump->index, jump->n);
+    }
 
-if (current && current->n == value)
-{
-a = prev ? prev->n : 0;
-b = current->n;
-printf("Value found between indexes [%d] and [%d]\n", a, b);
-return (current);
-}
+    printf("Value found between indexes [%ld] and [%ld]\n",
+           node->index, jump->index);
 
-printf("Value checked at index [%d] = [%d]\n", (int)current->n, current->n);
-printf("Value was not found\n");
-return (NULL);
+    for (; node->index < jump->index && node->n < value; node = node->next)
+        printf("Value checked at index [%ld] = [%d]\n", node->index, node->n);
+    printf("Value checked at index [%ld] = [%d]\n", node->index, node->n);
+
+    return (node->n == value ? node : NULL);
 }
